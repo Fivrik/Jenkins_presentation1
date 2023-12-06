@@ -13,10 +13,13 @@ pipeline {
 
         stage('Load Groovy File') {
           steps {
-            sh '''def pipeline = load
-\'pipeline.groovy\'
-pipeline.functionA()
-pipeline.functionB()'''
+            script {
+              def pipeline = load
+              'pipeline.groovy'
+              pipeline.functionA()
+              pipeline.functionB()
+            }
+
           }
         }
 
