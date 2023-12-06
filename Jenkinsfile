@@ -4,7 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         echo 'This is the Build stage'
-        archiveArtifacts(artifacts: 'git', allowEmptyArchive: true)
+        load 'pipeline.groovy'
+        archiveArtifacts(artifacts: 'function', allowEmptyArchive: true)
       }
     }
 
