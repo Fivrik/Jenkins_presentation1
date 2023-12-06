@@ -8,6 +8,7 @@ pipeline {
           pipeline.functionA()
           pipeline.functionB()
         }
+
       }
     }
 
