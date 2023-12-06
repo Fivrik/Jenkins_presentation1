@@ -1,9 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Load Groovy File') {
       steps {
-        echo 'This is the Build stage'
+        script {
+          def pipeline = load 'pipeline.groovy'
+          pipeline.functionA()
+          pipeline.functionB()
+        }
       }
     }
 
