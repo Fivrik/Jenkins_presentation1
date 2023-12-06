@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'This is the Build stage'
-        archiveArtifacts(artifacts: '**/git', allowEmptyArchive: true)
+        archiveArtifacts(artifacts: 'git', allowEmptyArchive: true)
       }
     }
 
